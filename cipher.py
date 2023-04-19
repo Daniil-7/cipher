@@ -22,7 +22,7 @@ class Crypto:
         os.remove(file)
 
     def file_decrypt(self, file: str, password: str, buffer_size: int = 524288, logger: bool = True):
-         """
+        """
         Decrypts a single file using pyAesCrypt.
 
         Args:
