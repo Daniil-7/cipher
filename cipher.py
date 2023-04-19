@@ -3,7 +3,7 @@ import pyAesCrypt
 
 
 class Crypto:
-    def file_crypt(self, file: str, password: str, buffer_size: int = 524288, logger: bool = True):
+    def file_crypt(self, file: str, password: str, buffer_size: int = 524288, logger: bool = True) -> None:
         """
         Encrypts a single file using pyAesCrypt.
 
@@ -21,7 +21,7 @@ class Crypto:
             print(f"[Encrypt] '{str(file)}.crp'")
         os.remove(file)
 
-    def file_decrypt(self, file: str, password: str, buffer_size: int = 524288, logger: bool = True):
+    def file_decrypt(self, file: str, password: str, buffer_size: int = 524288, logger: bool = True) -> None:
         """
         Decrypts a single file using pyAesCrypt.
 
@@ -43,7 +43,7 @@ class Crypto:
 
     def directory_crypt(
         self, directory: str, password: str, buffer_size: int = 524288, logger: bool = True, title_logger: bool = True
-    ):
+    ) -> None:
         """
         Recursively encrypts all files in a directory using pyAesCrypt.
 
@@ -70,7 +70,7 @@ class Crypto:
 
     def directory_decrypt(
         self, directory: str, password: str, buffer_size: int = 524288, logger: bool = True, title_logger: bool = True
-    ):
+    ) -> None:
         """
         Recursively decrypts all files in a directory using pyAesCrypt.
 
