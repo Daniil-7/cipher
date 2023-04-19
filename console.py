@@ -9,7 +9,7 @@ crypt = Crypto()
 @click.argument('crypt_or_decrypt')
 @click.argument('path')
 @click.argument('password')
-def main(crypt_or_decrypt, path, password):
+def main(crypt_or_decrypt: str, path: str, password: str) -> None:
     """
     Encryptor and decryptor of files and directories\n
     Attention\n
