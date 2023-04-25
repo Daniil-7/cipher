@@ -22,7 +22,8 @@ The `password` parameter is a string that is used as a key to encrypt and decryp
 
 ### Example of use:
 
-1. File_crypt() method
+1. `file_crypt()` method
+
 The file_crypt() method is used to encrypt a single file. Example usage:
 ```python
 from Crypto import Crypto
@@ -35,7 +36,10 @@ password = 'mypassword' # Пароль для шифрования
 crypto.file_crypt(file, password)
 ```
 In this example, we create a Crypto object, then specify the path to the file we want to encrypt and the password to encrypt it. We then call the file_crypt() method, which encrypts the file with the specified password. By default, the original file is deleted after encryption.
-2. File_decrypt() method
+
+
+2. `file_decrypt()` method
+
 The file_decrypt() method is used to decrypt a single file. Example usage:
 ```python
 from Crypto import Crypto
@@ -48,7 +52,10 @@ password = 'mypassword' # Пароль для расшифровки
 crypto.file_decrypt(file, password)
 ```
 In this example, we create a Crypto object, then specify the path to the file to decrypt and the password to decrypt it. Then we call the file_decrypt() method, which decrypts the file with the specified password. By default, the original file is deleted after decryption.
-3. directory_crypt() method
+
+
+3. `directory_crypt()` method
+
 The directory_crypt() method is used to encrypt all files in the specified directory and its subdirectories. Example usage:
 ```python
 from Crypto import Crypto
@@ -61,8 +68,11 @@ password = 'mypassword' # Пароль для шифрования
 crypto.directory_crypt(directory, password)
 
 ```
-В данном примере мы создаем объект Crypto, затем указываем путь к директории, которую нужно зашифровать, и пароль для шифрования. После этого вызываем метод directory_crypt(), который шифрует все файлы в указанной директории и ее поддиректориях с указанным паролем. По умолчанию, исходные файлы удаляются после шифрования.
-4. directory_decrypt() method
+In this example, we create a Crypto object, then specify the path to the directory to be encrypted and the password for encryption. We then call the directory_crypt() method, which encrypts all files in the specified directory and its subdirectories with the specified password. By default, the original files are deleted after encryption.
+
+
+4. `directory_decrypt()` method
+
 The directory_decrypt() method is used to decrypt all files in the specified directory and its subdirectories. Example usage:
 ```python
 from Crypto import Crypto
@@ -75,3 +85,4 @@ password = 'mypassword'
 crypto.directory_decrypt(directory, password)
 ```
 In this example, we create a Crypto object, then specify the path to the directory to be decrypted and the password for decryption. After that, we call the directory_decrypt() method, which decrypts all files in the specified directory and its subdirectories with the specified password. By default, the encrypted files are deleted after decryption.
+
